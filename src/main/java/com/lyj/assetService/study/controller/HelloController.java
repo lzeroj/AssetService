@@ -1,4 +1,4 @@
-package com.lyj.assetService.controller;
+package com.lyj.assetService.study.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

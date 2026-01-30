@@ -1,8 +1,14 @@
-package com.lyj.assetService.domain;
+package com.lyj.assetService.study.domain;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Member {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
 
     public Long getId() {

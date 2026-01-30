@@ -1,7 +1,7 @@
-package com.lyj.assetService.controller;
+package com.lyj.assetService.study.controller;
 
-import com.lyj.assetService.domain.Member;
-import com.lyj.assetService.service.MemberService;
+import com.lyj.assetService.study.domain.Member;
+import com.lyj.assetService.study.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,6 +26,7 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memeberService = " + memberService.getClass()); // aop 프록시 체크
     }
 
     @GetMapping("/members/new")

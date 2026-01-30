@@ -1,15 +1,14 @@
-package com.lyj.assetService.service;
+package com.lyj.assetService.study.service;
 
-import com.lyj.assetService.domain.Member;
-import com.lyj.assetService.repository.MemberRepository;
-import com.lyj.assetService.repository.MemoryMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.lyj.assetService.study.domain.Member;
+import com.lyj.assetService.study.repository.MemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 //@Service
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
@@ -23,7 +22,6 @@ public class MemberService {
      * 회원가입
      */
     public Long join(Member member) {
-
         validateDuplicateMeber(member); //중복 회원 검증
         memberRepository.save(member);
         return member.getId();

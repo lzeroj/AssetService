@@ -1,4 +1,4 @@
-package com.lyj.assetService.controller;
+package com.lyj.assetService.study.controller;
 
 public class MemberForm {
     private String name;

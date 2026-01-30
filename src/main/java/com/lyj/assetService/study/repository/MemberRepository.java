@@ -1,6 +1,6 @@
-package com.lyj.assetService.repository;
+package com.lyj.assetService.study.repository;
 
-import com.lyj.assetService.domain.Member;
+import com.lyj.assetService.study.domain.Member;
 
 import java.util.List;
 import java.util.Optional;

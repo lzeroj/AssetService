@@ -1,7 +1,6 @@
-package com.lyj.assetService.repository;
+package com.lyj.assetService.study.repository;
 
-import com.lyj.assetService.domain.Member;
-import org.springframework.stereotype.Repository;
+import com.lyj.assetService.study.domain.Member;
 
 import java.util.*;
 

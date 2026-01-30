@@ -1,13 +1,13 @@
-package com.lyj.assetService.controller;
+package com.lyj.assetService;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
+public class MainController {
 
     @GetMapping("/")
-    public String home() {
-        return "home";
+    public String main(){
+        return "main";
     }
 }

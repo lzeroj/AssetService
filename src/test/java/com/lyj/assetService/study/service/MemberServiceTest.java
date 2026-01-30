@@ -1,8 +1,8 @@
-package com.lyj.assetService.service;
+package com.lyj.assetService.study.service;
 
-import com.lyj.assetService.domain.Member;
-import com.lyj.assetService.repository.MemoryMemberRepository;
-import org.assertj.core.api.Assertions;
+import com.lyj.assetService.study.domain.Member;
+import com.lyj.assetService.study.repository.MemoryMemberRepository;
+import com.lyj.assetService.study.service.MemberService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

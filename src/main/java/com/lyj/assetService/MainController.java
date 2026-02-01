@@ -14,13 +14,19 @@ import java.util.Map;
 public class MainController {
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody Map<String,String> user) {
-        String id = user.get("id");
-        String pw = user.get("pw");
+    public ResponseEntity<Map<String, String>> login(@RequestBody Map<String,String> user) {
+        String id = user.get("username");
+        String pw = user.get("password");
 
-        if("test".equals(id) && "123".equals(pw)) {
-            return ResponseEntity.ok("OK"); // 로그인 성공
+        System.out.println("test : " + id + " " + pw);
+
+        if ("admin".equals(id) && "1234".equals(pw)) {
+            // 로그인 성공
+            return ResponseEntity.ok(Map.of("token", "dummy-jwt-token"));
+        } else {
+            // 로그인 실패
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body(Map.of("message", "로그인 실패"));
         }
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Fail");
     }
 }

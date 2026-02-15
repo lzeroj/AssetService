@@ -76,4 +76,14 @@ class UserRepositoryTest {
                 .isInstanceOf(IllegalStateException.class)
                 .hasMessageContaining("비밀번호");
     }
+
+    @Test
+    void 자산등록() {
+
+    }
+
+    @Test
+    void 자산목록조회(){
+
+    }
 }

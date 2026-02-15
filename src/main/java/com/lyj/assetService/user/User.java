@@ -2,9 +2,10 @@ package com.lyj.assetService.user;
 
 import com.lyj.assetService.global.entity.BaseTimeEntity;
 import jakarta.persistence.*;
-import lombok.*;
-
-import java.time.LocalDateTime;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "users")
@@ -14,7 +15,7 @@ public class User extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userNo;
 
     @Column(nullable = false, length = 100, unique = true)
     private String email;

@@ -13,7 +13,7 @@ public class UserResponseDto {
 
     // 엔티티를 받아서 DTO로 변환 (박스 포장)
     public UserResponseDto(User user) {
-        this.id = user.getId();
+        this.id = user.getUserNo();
         this.email = user.getEmail();
         this.name = user.getName();
     }
